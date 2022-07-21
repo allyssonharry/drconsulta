@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { NavigationContext } from '@react-navigation/native'
-import { Button } from '../../components/button'
+import { Button } from '~components/button'
 
 import { Container, IconSuccess, Heading, Lead } from './styles'
 
@@ -9,7 +9,7 @@ export function SchedulingSuccessScreen() {
 
   return (
     <Container>
-      <IconSuccess source={require('../../assets/images/success.png')} />
+      <IconSuccess />
       <Heading>Sua consulta foi agendada!</Heading>
       <Lead>Lembre de levar os documentos necessários.</Lead>
       <Button
