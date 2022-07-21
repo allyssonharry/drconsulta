@@ -1,31 +1,32 @@
-import React, { useState, useEffect, useContext } from 'react'
-import PropTypes from 'prop-types'
-import { NavigationContext } from '@react-navigation/native'
-import DatePicker from 'react-native-date-picker'
-import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
+import { NavigationContext } from '@react-navigation/native'
 import { formatISO, isWeekend } from 'date-fns'
+import PropTypes from 'prop-types'
+import React, { useContext, useEffect, useState } from 'react'
+import { useForm } from 'react-hook-form'
+import DatePicker from 'react-native-date-picker'
 import { Masks } from 'react-native-mask-input'
 import { AlertModal } from '~components/alert-modal'
+import { Button } from '~components/button'
+import { Input } from '~components/input'
+import { useApp } from '~contexts/app.context'
 import api from '~services/api'
+import { fieldValidationSchema } from '~utils/field-validation-schama.util'
 import formatDate, {
   DATE_SCHEMA_FORMAT,
   DATE_SHORT_SCHEMA_FORMAT,
   HOUR_SHORT_SCHEMA_FORMAT,
 } from '~utils/format-date.util'
-import { fieldValidationSchema } from '~utils/field-validation-schama.util'
-import { Input } from '~components/input'
-import { Button } from '~components/button'
 
 import {
   Container,
+  FormContent,
   FormSection,
   FormSectionTitle,
-  FormContent,
   HStack,
-  Picker,
   HStackSep,
   InputGroup,
+  Picker,
   PickerBadge,
 } from './styles'
 
@@ -39,6 +40,7 @@ export function SchedulingForm({ catName }) {
   const { control, handleSubmit } = useForm({
     resolver: yupResolver(fieldValidationSchema),
   })
+  const { platform } = useApp()
 
   const navigation = useContext(NavigationContext)
 
@@ -65,6 +67,9 @@ export function SchedulingForm({ catName }) {
         cpf: await data.cpf,
         birthday: await data.birthday,
         phone: await data.phone,
+      },
+      debug: {
+        platform,
       },
     }
 

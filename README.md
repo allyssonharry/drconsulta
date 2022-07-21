@@ -36,7 +36,7 @@ pod install
 
 ###  3: Setup enviroment
 
-- Go to your project's root folder and rename `.env-example` to `.env`
+- Go to your project's root folder and rename `.env.example` to `.env`
 
 ###  4: Run application
 
@@ -68,3 +68,6 @@ This template follows a very simple project structure:
 |   `-- app.js
 `-- index.js
 ```
+
+# ToDo
+- Improve hard-code strings
