@@ -1,6 +1,6 @@
 import styled from 'styled-components/native'
 
-import { theme } from '../../styles/theme'
+import { theme } from '~styles/theme'
 
 export const Container = styled.View`
   flex: 1;
@@ -9,7 +9,9 @@ export const Container = styled.View`
   background-color: ${theme.colors.success};
 `
 
-export const IconSuccess = styled.Image`
+export const IconSuccess = styled.Image.attrs(() => ({
+  source: require('~assets/images/success.png'),
+}))`
   width: 68px;
   height: 68px;
   margin: 0 auto;

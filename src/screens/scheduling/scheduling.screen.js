@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { SchedulingForm } from '../../components/scheduling-form'
+import { SchedulingForm } from '~components/scheduling-form'
 
 import { Container, Scrolled, Headline, Heading, SubHeading } from './styles'
 
