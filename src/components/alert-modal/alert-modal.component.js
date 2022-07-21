@@ -23,6 +23,7 @@ export function AlertModal({
   isVisible = true,
 }) {
   // const { platform } = useApp()
+
   return (
     <ModalContainer>
       <Modal isVisible={isVisible}>

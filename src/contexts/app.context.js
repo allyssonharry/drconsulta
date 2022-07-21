@@ -2,15 +2,15 @@ import React, { createContext, useContext } from 'react'
 import PropTypes from 'prop-types'
 import { Platform } from 'react-native'
 
-const DEFAULT_STATE = {
+const contextValue = {
   platform: Platform,
 }
 
-const AppContext = createContext(DEFAULT_STATE)
+const AppContext = createContext(contextValue)
 
 export function AppProvider({ children }) {
   return (
-    <AppContext.Provider value={DEFAULT_STATE}>{children}</AppContext.Provider>
+    <AppContext.Provider value={contextValue}>{children}</AppContext.Provider>
   )
 }
 
