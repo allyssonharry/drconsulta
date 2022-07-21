@@ -4,7 +4,7 @@ import { NavigationContext } from '@react-navigation/native'
 import DatePicker from 'react-native-date-picker'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
-import { isWeekend } from 'date-fns'
+import { formatISO, isWeekend } from 'date-fns'
 import { Masks } from 'react-native-mask-input'
 import { AlertModal } from '~components/alert-modal'
 import api from '~services/api'
@@ -58,7 +58,7 @@ export function SchedulingForm({ catName }) {
       scheduling: {
         category: catName,
         datetime: formatDate(scheduling, DATE_SCHEMA_FORMAT),
-        createdAt: Date.now(),
+        createdAt: formatISO(Date.now()),
       },
       personal: {
         fullname: await data.fullname,
