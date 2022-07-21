@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { StatusBar } from 'react-native'
 import { ExpertsCategories } from '~components/experts-categories'
 import { Headline } from '~components/headline'
@@ -23,8 +22,4 @@ export function HomeScreen() {
       </Container>
     </>
   )
-}
-
-HomeScreen.propTypes = {
-  props: PropTypes.object,
 }
