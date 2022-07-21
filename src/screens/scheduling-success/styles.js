@@ -33,4 +33,8 @@ export const Lead = styled.Text`
   margin-bottom: 50px;
 `
 
+export const ButtonGroup = styled.View`
+  margin: 0 80px;
+`
+
 export const ScrollView = styled.ScrollView``

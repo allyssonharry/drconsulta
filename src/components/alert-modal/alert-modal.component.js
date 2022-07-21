@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Modal from 'react-native-modal'
-// import { useApp } from '~contexts/app.context'
 
 import {
   ModalContainer,
@@ -22,8 +21,6 @@ export function AlertModal({
   onPress,
   isVisible = true,
 }) {
-  // const { platform } = useApp()
-
   return (
     <ModalContainer>
       <Modal isVisible={isVisible}>
