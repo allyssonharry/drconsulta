@@ -69,5 +69,13 @@ This template follows a very simple project structure:
 `-- index.js
 ```
 
+# Webhook
+
+- Query result can be found at:
+
+```bash
+https://webhook.site/7dfe8b9f-0ca1-41cf-bd7b-b0cd32b1b25a
+```
+
 # ToDo
 - Improve hard-code strings
