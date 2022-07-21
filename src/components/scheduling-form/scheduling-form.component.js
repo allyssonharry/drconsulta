@@ -185,7 +185,7 @@ export function SchedulingForm({ catName }) {
           setAlertInfo(false)
           setTimeout(() => {
             setOpenPicker(true)
-          }, 500)
+          }, 300)
         }}
         isVisible={alertInfo}
       />
